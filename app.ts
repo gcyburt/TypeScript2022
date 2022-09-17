@@ -1,13 +1,13 @@
-type Combinable = number | string;
-
-function combine(x: Combinable, y: Combinable) {
-  let result: string | number;
-  if (typeof x === "number" && typeof y == "number") {
-    result = +x + +y;
-  } else {
-    result = x.toString() + y.toString();
-  }
-  return result;
+function add(num1: number, num2: number) {
+  return num1 + num2;
 }
 
-console.log(combine(5, "10"));
+const n1 = 5;
+const n2 = 6;
+
+console.log(add(n1, n2));
+
+let fun: (a: number, b: number) => number;
+fun = add;
+
+console.log(fun(n1, n2));
