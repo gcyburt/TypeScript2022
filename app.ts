@@ -1,7 +1,7 @@
 type Combinable = number | string;
 
 function combine(x: Combinable, y: Combinable) {
-  let result;
+  let result: string | number;
   if (typeof x === "number" && typeof y == "number") {
     result = +x + +y;
   } else {
